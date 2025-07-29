@@ -564,14 +564,40 @@
                   "new": false,
                   "number": 11,
                   "score": "2"
+                },
+                {
+                  "id": "f47a694a-93f2-49aa-86e0-071303791071",
+                  "title": "SQL Injection",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Input Sanitizer",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "4"
+                },
+                {
+                  "id": "052db36b-5da4-4a1c-90f0-e4c299070050",
+                  "title": "Repeated Log In",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Based on Captcha or Based on IP",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "6"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 1,
-                "tampering": 0,
+                "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             },
@@ -589,6 +615,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 11
+    "threatTop": 13
   }
 }
