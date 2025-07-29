@@ -283,13 +283,14 @@
                 "text": "captcha"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -373,7 +374,6 @@
               ]
             },
             "id": "d7e1c0f2-5170-4a99-9ca6-5608bb2a74e8",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "captcha",
@@ -381,7 +381,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -390,11 +390,11 @@
                 {
                   "id": "8359705d-e351-4df7-94d2-dc9b6e05ae3c",
                   "title": "Bruteforce",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Captcha",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -402,13 +402,20 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -425,13 +432,14 @@
                 "text": "Input fields"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -515,7 +523,6 @@
               ]
             },
             "id": "5bb5a0fc-9c05-420b-aeb5-5bf0fa3ab23a",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Input fields",
@@ -523,7 +530,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -532,7 +539,7 @@
                 {
                   "id": "a6219565-d8cc-4848-8270-0d0fde237775",
                   "title": "SQL Injection",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Provide a description for this threat",
@@ -545,7 +552,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -567,13 +574,14 @@
                 "text": "Repeated logged in"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -657,7 +665,6 @@
               ]
             },
             "id": "ad149997-97ba-45b4-8854-3cdafdd378a2",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Repeated logged in",
@@ -665,7 +672,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -674,11 +681,11 @@
                 {
                   "id": "2906838f-00aa-487a-a33c-672c918017dd",
                   "title": "RateLimit",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Denial of service",
                   "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Based on IP",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
@@ -690,7 +697,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               }
             }
