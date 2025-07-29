@@ -148,8 +148,8 @@
                 "text": "Registration"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -246,12 +246,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "030d657f-3420-4c04-868b-f16139f3c27c",
+                  "title": "BruteForce",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Repeated Attack",
+                  "mitigation": "Captcha",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "2"
+                },
+                {
+                  "id": "1d618833-4286-4af3-a086-1594e9e9f4a7",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "SQL Injection",
+                  "mitigation": "Input Sanitizer",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "4"
+                },
+                {
+                  "id": "e27cb712-449e-428f-8640-987307cd86b1",
+                  "title": "Rate Limiting",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Based on IP check",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 4,
+                "tampering": 6,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 3,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -297,7 +345,13 @@
             "target": {
               "cell": "9dcf82a2-e23f-4f08-b095-b0345756ea83",
               "port": "186da6dc-97d0-4e1f-a4c6-c8a08830bca2"
-            }
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 250
+              }
+            ]
           }
         ],
         "description": "Registration"
@@ -305,6 +359,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 3
   }
 }
