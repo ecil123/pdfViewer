@@ -280,7 +280,7 @@
             },
             "attrs": {
               "text": {
-                "text": "captcha"
+                "text": "input fields"
               },
               "body": {
                 "stroke": "#333333",
@@ -376,7 +376,7 @@
             "id": "d7e1c0f2-5170-4a99-9ca6-5608bb2a74e8",
             "data": {
               "type": "tm.Process",
-              "name": "captcha",
+              "name": "input fields",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -685,7 +685,7 @@
                   "severity": "TBD",
                   "type": "Denial of service",
                   "description": "Provide a description for this threat",
-                  "mitigation": "Based on IP",
+                  "mitigation": "Based on IP or Captcha",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
@@ -697,7 +697,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 4,
                 "elevationOfPrivilege": 0
               }
             }
